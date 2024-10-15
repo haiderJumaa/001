@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة الإدارة - نظام إدارة الطلاب المتطور</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">لوحة الإدارة - نظام إدارة الطلاب المتطور</h1>
+        <div id="adminPanel" class="admin-panel">
+            <button id="addNewStudentBtn" class="btn add-btn">إضافة طالب جديد</button>
+            <select id="studentSelect" onchange="loadStudentForEdit()" class="admin-select"></select>
+            <div id="editForm" class="edit-form">
+                <input type="text" id="editCode" placeholder="رمز الطالب" class="admin-input">
+                <input type="text" id="editName" placeholder="اسم الطالب" class="admin-input">
+                <input type="text" id="editGrade" placeholder="الصف" class="admin-input">
+                <input type="number" id="editAttendance" placeholder="نسبة الحضور" class="admin-input">
+                <input type="text" id="editImage" placeholder="رابط صورة الطالب" class="admin-input">
+                <textarea id="editGrades" placeholder="الدرجات (المادة: الدرجة، المادة: الدرجة)" class="admin-textarea"></textarea>
+                <textarea id="editAchievements" placeholder="الأنشطة والإنجازات (مفصولة بفواصل)" class="admin-textarea"></textarea>
+                <button onclick="saveStudentChanges()" class="btn save-btn">حفظ التغييرات</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
